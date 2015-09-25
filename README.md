@@ -1,6 +1,7 @@
 # EnvTestHelpers
 
-Helps to handle env vars in tests.
+EnvTestHelpers is a collection of helpers to work with environment variables in tests.
+Right now is only working with Rspec.
 
 Use case:
 - I have configurations set in ignored files, most of this variables are Api keys or passwords.
@@ -25,17 +26,11 @@ Or install it yourself as:
 
     $ gem install env_test_helpers
 
-## Rspec
+## RSpec
  All done. _The module gets included in the rspec configure block._
 
 ## Else
-```ruby
- require 'env_test_helpers'
-```
- or
-```ruby
- include EnvTestHelpers
-```
+Right now only works with RSpec.
 
 ## Usage
 

@@ -1,6 +1,7 @@
 # EnvTestHelpers
 
 Helps to handle env vars in tests.
+
 Use case:
 - I have configurations set in ignored files, most of this variables are Api keys or passwords.
 - The code and tests needs this variables but I can not share them in my VCS.
@@ -25,14 +26,20 @@ Or install it yourself as:
     $ gem install env_test_helpers
 
 ## Rspec
- All done. _the module gets included in the rspec configure block_
+ All done. _The module gets included in the rspec configure block._
 
 ## Else
- require or include 'env_test_helpers'
+```ruby
+ require 'env_test_helpers'
+```
+ or
+```ruby
+ include EnvTestHelpers
+```
 
 ## Usage
 
-**In a block:**
+**Using the variables inside a block:**
 ```ruby
 it 'does something with the FOO environment variable' do
   with_env_vars 'FOO' => 'bar' do
@@ -41,7 +48,7 @@ it 'does something with the FOO environment variable' do
 end
 ```
 
-**As a before:**
+**As a before block:**
 ```ruby
 describe Thing do
   before(:all) do

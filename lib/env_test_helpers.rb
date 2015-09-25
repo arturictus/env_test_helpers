@@ -30,8 +30,8 @@ module EnvTestHelpers
   end
 end
 
-if defined? Rspec
+if defined? RSpec
   RSpec.configure do |c|
-    c.include EnvHelpers
+    c.include EnvTestHelpers
   end
 end

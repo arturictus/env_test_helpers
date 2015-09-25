@@ -8,9 +8,14 @@ Gem::Specification.new do |spec|
   spec.version       = EnvTestHelpers::VERSION
   spec.authors       = ["Artur Pañach"]
   spec.email         = ["arturictus@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Helps to handle env vars in tests.}
+  spec.description   = %q{Use case:
+  - I have configurations set in ignored files, most of this variables are Api keys or passwords.
+  - The code and tests needs this variables but I can not share them in my VCS.
+
+  Solution:
+  - I mock or set this variables in the test they are required.}
+  spec.homepage      = "https://github.com/arturictus/env_test_helpers"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
